@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Task Manager</h1>
+        
+        <form id="taskForm">
+            <h2>Add Task</h2>
+            <label for="title">Task Title:</label>
+            <input type="text" id="title" required><br>
+            
+            <label for="dueTime">Due Time (in minutes):</label>
+            <input type="number" id="dueTime" required><br>
+            
+            <label for="priority">Priority:</label>
+            <select id="priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select><br>
+            
+            <button type="submit">Add Task</button>
+        </form>
+
+        <form id="filterForm">
+            <h2>Filter Tasks</h2>
+            <label for="filterTime">Filter tasks due within (minutes):</label>
+            <input type="number" id="filterTime" required><br>
+            <button type="submit">Filter Tasks</button>
+        </form>
+
+        <h2>Task List</h2>
+        <ul id="taskList"></ul>
+
+        <h2>Task Reminders</h2>
+        <div id="reminders"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
